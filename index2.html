@@ -1087,7 +1087,7 @@
 
     // --- 4. CHIAMATA API DI GEMINI CON BACKOFF ---
     async function callGeminiAPI(prompt, history = [], isReport = false, customSystemPrompt = null) {
-      const apiKey = "";
+      const apiKey = "AQ.Ab8RN6IDYzuDpjM_szV4rEPQQgyG2kq6tEv8JKsLDGwkrJqn7Q";
       const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
       const defaultSystemPrompt = `Sei l'Assistente BACS di TEKNIPOST. Sei un esperto normativo per la Building Automation. Stai parlando con ${state.userProfile?.isAdmin ? "l'amministratore interno" : "il progettista esterno"} ${state.userProfile?.nome} ${state.userProfile?.cognome} dello studio "${state.userProfile?.studio}". UNI EN ISO 52120-1 (ex 15232). Asseverazione tramite UNI/TS 11651:2023. Classe A alta efficienza, Classe B avanzata, Classe C standard, Classe D non efficiente. Transizione 5.0, Conto Termico 3.0 (40% spesa, 100% scuole/ospedali). Integrazione MES-BEMS. Rispondi in italiano in modo sintetico, professionale e chiama l'utente per nome (${state.userProfile?.nome}).`;
